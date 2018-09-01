@@ -4,9 +4,7 @@ export default class RentalCard extends Component {
   render() {
     return (
       <div>
-      <div className='container'>
-      <section id='rentalListing'>
-        <div class='row'>
+   
           <div class='col-md-3 col-xs-6'>
             <div class='card bwm-card'>
               <img class='card-img-top' src='http://via.placeholder.com/350x250' alt=''></img>
@@ -18,9 +16,7 @@ export default class RentalCard extends Component {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+
     
       </div>
     )
