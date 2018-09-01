@@ -6,7 +6,7 @@ export default class RentalCard extends Component {
         <div>
 
             <div class='col-md-6 col-xs-6'>
-                <Link to='/id'>
+                <Link to={`/rentals/${this.props.rental.id}`}>
                     <div class='card bwm-card'>
                         <img class='card-img-top' src={this.props.rental.image} alt=''></img>
                         <div class='card-block'>
