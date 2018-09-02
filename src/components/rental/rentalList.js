@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import RentalCard from './RentalCard'
 import { connect } from 'react-redux';
+import * as actions from '../../actions'
  class RentalList extends Component {
  
  
@@ -21,6 +22,9 @@ import { connect } from 'react-redux';
             rentals
         })
     }
+    componentWillMount() {
+        this.props.dispatch(actions.fetchRentals());
+    }
   render() {
     return (
           <div>
@@ -37,7 +41,7 @@ import { connect } from 'react-redux';
 function mapStateToProps(state){
     return{
 
-    rentals: state.rentals
+    rentals: state.rentals.data
 }
 }
 export default connect(mapStateToProps)(RentalList);
