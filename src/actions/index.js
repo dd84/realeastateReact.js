@@ -41,7 +41,7 @@ const rentals = [{
     createdAt: "24/12/2017"
 },
 {
-    id: 4,
+    id: '4',
     title: "Central Apartment 4",
     city: "Berlin",
     street: "Haupt strasse",
@@ -81,7 +81,7 @@ export const fetchRentalById = (rentalId) => {
 
         //simulate servercall
         setTimeout(() => {
-            const rental = rental.find((rental) => rental.id === rentalId);
+            const rental = this.rentals.find((rental) => rental.id === rentalId);
             dispatch(fetchRentalByIdSuccess(rental));
         }, 1000);
 
