@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import * as actions from '../../actions'
+import * as actions from '../../../actions'
 
  class RenderDetailed extends Component {
    componentWillMount() {
@@ -8,13 +8,18 @@ import * as actions from '../../actions'
      this.props.dispatch(actions.fetchRentalById(rentalId));
    }
   render() {
-    const rental = this.props.rental;
+    if(this.props.rental.id) {
     return (
       <div>
-       I am a drental component {rental.title}
+      <h1> I am a rental component {this.props.rental.title}</h1>
       </div>
     )
+  } else {
+    return (
+      <h1>Loading...</h1>
+    )
   }
+}
 }
 function mapStateToProps(state){
   return{

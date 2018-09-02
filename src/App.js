@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 import { Provider } from 'react-redux';
 import './App.css';
 import Header from './shared/Header'
-import RentalList from './components/rental/rentalList'
-import RenderDetailed from './components/rental/renderDetailed'
+import RentalList from './components/rental/rental-listing/rentalList'
+import RenderDetailed from './components/rental/rental-detail/renderDetailed'
 
 const store = require('./reducers').init();
 
